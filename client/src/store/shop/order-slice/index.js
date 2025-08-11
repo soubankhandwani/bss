@@ -13,7 +13,7 @@ export const createNewOrder = createAsyncThunk(
   '/order/createNewOrder',
   async (orderData) => {
     const response = await axios.post(
-      'http://bittersweetscent.com:5000api/shop/order/create',
+      'http://http://194.163.145.111/api/shop/order/create',
       orderData
     );
 
@@ -25,7 +25,7 @@ export const capturePayment = createAsyncThunk(
   '/order/capturePayment',
   async ({ paymentId, payerId, orderId }) => {
     const response = await axios.post(
-      'http://bittersweetscent.com:5000api/shop/order/capture',
+      'http://http://194.163.145.111/api/shop/order/capture',
       {
         paymentId,
         payerId,
@@ -41,7 +41,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
   '/order/getAllOrdersByUserId',
   async (userId) => {
     const response = await axios.get(
-      `http://bittersweetscent.com:5000api/shop/order/list/${userId}`
+      `http://http://194.163.145.111/api/shop/order/list/${userId}`
     );
 
     return response.data;
@@ -52,7 +52,7 @@ export const getOrderDetails = createAsyncThunk(
   '/order/getOrderDetails',
   async (id) => {
     const response = await axios.get(
-      `http://bittersweetscent.com:5000api/shop/order/details/${id}`
+      `http://http://194.163.145.111/api/shop/order/details/${id}`
     );
 
     return response.data;
