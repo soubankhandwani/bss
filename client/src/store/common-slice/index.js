@@ -10,7 +10,7 @@ export const getFeatureImages = createAsyncThunk(
   '/order/getFeatureImages',
   async () => {
     const response = await axios.get(
-      `http://http://194.163.145.111/api/common/feature/get`
+      `http://194.163.145.111/api/common/feature/get`
     );
 
     return response.data;
@@ -21,7 +21,7 @@ export const addFeatureImage = createAsyncThunk(
   '/order/addFeatureImage',
   async (image) => {
     const response = await axios.post(
-      `http://http://194.163.145.111/api/common/feature/add`,
+      `http://194.163.145.111/api/common/feature/add`,
       { image }
     );
 

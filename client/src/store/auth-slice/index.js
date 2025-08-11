@@ -12,7 +12,7 @@ export const registerUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      'http://http://194.163.145.111/api/auth/register',
+      'http://194.163.145.111/api/auth/register',
       formData,
       {
         withCredentials: true,
@@ -28,7 +28,7 @@ export const loginUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      'http://http://194.163.145.111/api/auth/login',
+      'http://194.163.145.111/api/auth/login',
       formData,
       {
         withCredentials: true,
@@ -44,7 +44,7 @@ export const logoutUser = createAsyncThunk(
 
   async () => {
     const response = await axios.post(
-      'http://http://194.163.145.111/api/auth/logout',
+      'http://194.163.145.111/api/auth/logout',
       {},
       {
         withCredentials: true,
@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      'http://http://194.163.145.111/api/auth/check-auth',
+      'http://194.163.145.111/api/auth/check-auth',
       {
         withCredentials: true,
         headers: {
