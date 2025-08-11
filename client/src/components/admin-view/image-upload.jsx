@@ -50,7 +50,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append('my_file', imageFile);
     const response = await axios.post(
-      'http://194.163.145.111/api/admin/products/upload-image',
+      'https://bittersweetscent.com/api/admin/products/upload-image',
       data
     );
     console.log(response, 'response');
