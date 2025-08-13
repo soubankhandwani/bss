@@ -22,6 +22,10 @@ import { Skeleton } from '@/components/ui/skeleton';
 import PaypalReturnPage from './pages/shopping-view/paypal-return';
 import PaymentSuccessPage from './pages/shopping-view/payment-success';
 import SearchProducts from './pages/shopping-view/search';
+import PrivacyPolicy from './pages/policy/privacy-policy';
+import TermsAndConditions from './pages/policy/terms-and-conditions';
+import CancellationAndRefunds from './pages/policy/cancellation-and-refund';
+import ShippingDelivery from './pages/policy/shipping-and-delivery';
 
 function App() {
   const { user, isAuthenticated, isLoading } = useSelector(
@@ -88,6 +92,15 @@ function App() {
           <Route path="paypal-return" element={<PaypalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
           <Route path="search" element={<SearchProducts />} />
+        </Route>
+        <Route path="/policy">
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+          <Route
+            path="cancellation-and-refunds"
+            element={<CancellationAndRefunds />}
+          />
+          <Route path="shipping-and-delivery" element={<ShippingDelivery />} />
         </Route>
         <Route path="/unauth-page" element={<UnauthPage />} />
         <Route path="*" element={<NotFound />} />
