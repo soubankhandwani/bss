@@ -1,3 +1,4 @@
+
 import { emailVerificationLink } from "@/email/emailVerificationLink";
 import { connectDB } from "@/lib/databaseConnection";
 import { catchError, response } from "@/lib/helperFunction";
@@ -5,6 +6,7 @@ import { sendMail } from "@/lib/sendMail";
 import { zSchema } from "@/lib/zodSchema";
 import UserModel from "@/models/User.model";
 import { SignJWT } from "jose";
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
     try {
@@ -48,7 +50,10 @@ export async function POST(request) {
 
         await sendMail('Email Verification request from Developer Goswami', email, emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/auth/verify-email/${token}`))
 
-        return response(true, 200, 'Registration success, Please verify your email address.')
+        // return response(true, 200, 'Registration success, Please verify your email address.')
+        return NextResponse.json({
+        success: true, statusCode: 200, message: 'Registration success, Please verify your email address.',
+    })
 
     } catch (error) {
         catchError(error)
