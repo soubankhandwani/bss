@@ -51,11 +51,28 @@ export async function POST(request) {
         await sendMail('Email Verification request from Developer Goswami', email, emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/auth/verify-email/${token}`))
 
         // return response(true, 200, 'Registration success, Please verify your email address.')
-        return Response.json({
+        return NextResponse.json({
         success: true, statusCode: 200, message: 'Registration success, Please verify your email address.',
     })
 
     } catch (error) {
+        let errorObj = {}
+
+        if (process.env.NODE_ENV === 'development') {
+            errorObj = {
+                message: error.message,
+                error
+            }
+        } else {
+            errorObj = {
+                message: customMessage || 'Internal server error.',
+            }
+        }
         catchError(error)
+        return NextResponse.json({
+                success: false,
+                statusCode: error.code,
+                ...errorObj
+            })
     }
 }
