@@ -50,10 +50,10 @@ export async function POST(request) {
 
         await sendMail('Email Verification request from Developer Goswami', email, emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/auth/verify-email/${token}`))
 
-        return response(true, 200, 'Registration success, Please verify your email address.')
-    //     return NextResponse.json({
-    //     success: true, statusCode: 200, message: 'Registration success, Please verify your email address.',
-    // })
+        // return response(true, 200, 'Registration success, Please verify your email address.')
+        return NextResponse.json({
+        success: true, statusCode: 200, message: 'Registration success, Please verify your email address.',
+    })
 
     } catch (error) {
         // let errorObj = {}
@@ -68,6 +68,9 @@ export async function POST(request) {
         //         message: customMessage || 'Internal server error.',
         //     }
         // }
-        catchError(error)
+        // catchError(error)
+        return NextResponse.json({
+        success: false, statusCode: 500, message: 'Internal server error. Problem in registration.',
+    })
     }
 }
