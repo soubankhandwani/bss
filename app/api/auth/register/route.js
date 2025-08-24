@@ -51,7 +51,7 @@ export async function POST(request) {
         await sendMail('Email Verification request from Developer Goswami', email, emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/auth/verify-email/${token}`))
 
         // return response(true, 200, 'Registration success, Please verify your email address.')
-        return NextResponse.json({
+        return Response.json({
         success: true, statusCode: 200, message: 'Registration success, Please verify your email address.',
     })
 
