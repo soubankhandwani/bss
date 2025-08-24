@@ -70,7 +70,7 @@ export async function POST(request) {
         // }
         // catchError(error)
         return NextResponse.json({
-        success: false, statusCode: 500, message: 'Internal server error. Problem in registration.',
+        success: false, statusCode: 500, message: 'Internal server error. Problem in registration.' + error.message,
     })
     }
 }
