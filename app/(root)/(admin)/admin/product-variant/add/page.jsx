@@ -44,7 +44,7 @@ const AddProduct = () => {
   const formSchema = zSchema.pick({
     product: true,
     sku: true,
-    color: true,
+    brand: true,
     size: true,
     mrp: true,
     sellingPrice: true,
@@ -56,7 +56,7 @@ const AddProduct = () => {
     defaultValues: {
       product: "",
       sku: "",
-      color: "",
+      brand: "",
       size: "",
       mrp: "",
       sellingPrice: "",
@@ -158,12 +158,12 @@ const AddProduct = () => {
                 <div className=''>
                   <FormField
                     control={form.control}
-                    name="color"
+                    name="brand"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Color <span className='text-red-500'>*</span></FormLabel>
+                        <FormLabel>Brand <span className='text-red-500'>*</span></FormLabel>
                         <FormControl>
-                          <Input type="text" placeholder="Enter color" {...field} />
+                          <Input type="text" placeholder="Enter brand name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -176,7 +176,7 @@ const AddProduct = () => {
                     name="size"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Size <span className='text-red-500'>*</span></FormLabel>
+                        <FormLabel>Intensity <span className='text-red-500'>*</span></FormLabel>
                         <FormControl>
                           <Select
                             options={sizes}

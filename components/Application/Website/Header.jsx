@@ -3,7 +3,7 @@ import { USER_DASHBOARD, WEBSITE_HOME, WEBSITE_LOGIN, WEBSITE_SHOP } from '@/rou
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import logo from '@/public/assets/images/logo-black.png'
+import logo from '@/public/assets/images/bss-logo.jpg'
 import { IoIosSearch } from "react-icons/io";
 import Cart from './Cart'
 import { VscAccount } from "react-icons/vsc";
@@ -29,7 +29,7 @@ const Header = () => {
                         width={383}
                         height={146}
                         alt='logo'
-                        className='lg:w-32 w-24'
+                        className='lg:w-42 w-24'
                     />
                 </Link>
 
@@ -71,18 +71,18 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className='text-gray-600 hover:text-primary hover:font-semibold'>
-                                <Link href={`${WEBSITE_SHOP}?category=t-shirts`} className='block py-2'>
-                                    T-shirt
+                                <Link href={`${WEBSITE_SHOP}?brand=Starbucks`} className='block py-2'>
+                                    Starbucks
                                 </Link>
                             </li>
                             <li className='text-gray-600 hover:text-primary hover:font-semibold'>
-                                <Link href={`${WEBSITE_SHOP}?category=hoodies`} className='block py-2'>
-                                    Hoodies
+                                <Link href={`${WEBSITE_SHOP}?brand=Nespresso`} className='block py-2'>
+                                    Nespresso
                                 </Link>
                             </li>
                             <li className='text-gray-600 hover:text-primary hover:font-semibold'>
-                                <Link href={`${WEBSITE_SHOP}?category=overshized`} className='block py-2'>
-                                    Oversized
+                                <Link href={`${WEBSITE_SHOP}?brand=M&S`} className='block py-2'>
+                                    Marks & Spencer (M&S)
                                 </Link>
                             </li>
                         </ul>

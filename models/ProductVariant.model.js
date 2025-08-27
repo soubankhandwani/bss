@@ -6,7 +6,7 @@ const ProductVariantSchema = new mongoose.Schema({
         ref: "Product",
         required: true,
     },
-    color: {
+    brand: {
         type: String,
         required: true,
         trim: true,

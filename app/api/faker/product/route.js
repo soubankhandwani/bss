@@ -30,7 +30,7 @@ export async function POST(req) {
             mediaMap.push(media._id);
         });
 
-        const colors = ["Red", "Blue", "Green", "Black"];
+        const brands = ["Red", "Blue", "Green", "Black"];
         const sizes = ["S", "M", "L", "XL", "2XL"];
 
         let products = [];

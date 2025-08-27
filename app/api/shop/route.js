@@ -12,7 +12,7 @@ export async function GET(request) {
 
         // get filters from query params  
         const size = searchParams.get('size')
-        const color = searchParams.get('color')
+        const brand = searchParams.get('brand')
         const minPrice = parseInt(searchParams.get('minPrice')) || 0
         const maxPrice = parseInt(searchParams.get('maxPrice')) || 100000
         const categorySlug = searchParams.get('category')
@@ -76,7 +76,7 @@ export async function GET(request) {
                             cond: {
                                 $and: [
                                     size ? { $in: ["$$variant.size", size.split(',')] } : { $literal: true },
-                                    color ? { $in: ["$$variant.color", color.split(',')] } : { $literal: true },
+                                    brand ? { $in: ["$$variant.brand", brand.split(',')] } : { $literal: true },
                                     { $gte: ["$$variant.sellingPrice", minPrice] },
                                     { $lte: ["$$variant.sellingPrice", maxPrice] },
                                 ]
@@ -112,7 +112,7 @@ export async function GET(request) {
                         alt: 1
                     },
                     variants: {
-                        color: 1,
+                        brand: 1,
                         size: 1,
                         mrp: 1,
                         sellingPrice: 1,

@@ -55,7 +55,7 @@ export async function GET(request, { params }) {
 
         // get color and size 
 
-        const getColor = await ProductVariantModel.distinct('color', { product: getProduct._id })
+        const getBrands = await ProductVariantModel.distinct('brands', { product: getProduct._id })
 
         const getSize = await ProductVariantModel.aggregate([
             { $match: { product: getProduct._id } },
@@ -79,7 +79,7 @@ export async function GET(request, { params }) {
         const productData = {
             product: getProduct,
             variant: variant,
-            colors: getColor,
+            brands: getBrands,
             sizes: getSize.length ? getSize.map(item => item.size) : [],
             reviewCount: review
         }

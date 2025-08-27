@@ -26,7 +26,7 @@ const ProductPage = async ({ params, searchParams }) => {
             <ProductDetails
                 product={getProduct?.data?.product}
                 variant={getProduct?.data?.variant}
-                colors={getProduct?.data?.colors}
+                brands={getProduct?.data?.brands}
                 sizes={getProduct?.data?.sizes}
                 reviewCount={getProduct?.data?.reviewCount}
             />

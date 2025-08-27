@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from '@/public/assets/images/logo-black.png'
+import logo from '@/public/assets/images/bss-logo.jpg'
 import Link from 'next/link'
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
@@ -26,7 +26,7 @@ const Footer = () => {
                         className='w-36 mb-2'
                     />
                     <p className='text-gray-500 text-sm'>
-                        E-store is your trusted destination for quality and convenience. From fashion to essentials, we bring everything you need right to your doorstep. Shop smart, live better — only at E-store.
+                        BitterSweetScent is your go-to destination for premium coffee pods. From Starbucks to Nespresso, we deliver your favorite blends and flavors straight to your door.
                     </p>
                 </div>
 
@@ -35,24 +35,21 @@ const Footer = () => {
                     <h4 className='text-xl font-bold uppercase mb-5'>Categories</h4>
                     <ul>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={`${WEBSITE_SHOP}?category=t-shirts`}>T-shirt</Link>
+                            <Link href={`${WEBSITE_SHOP}?category=coffee-pods`}>Coffee Pods</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={`${WEBSITE_SHOP}?category=hoodies`}>Hoodies</Link>
+                            <Link href={`${WEBSITE_SHOP}?category=coffee-beans`}>Coffee Beans</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={`${WEBSITE_SHOP}?category=oversized`}>Oversized</Link>
+                            <Link href={`${WEBSITE_SHOP}?category=coffee-powder`}>Coffee Powder</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={`${WEBSITE_SHOP}?category=full-sleeves`}>Full Sleeves</Link>
-                        </li>
-                        <li className='mb-2 text-gray-500'>
-                            <Link href={`${WEBSITE_SHOP}?category=polo`}>Polo</Link>
+                            <Link href={`${WEBSITE_SHOP}?category=coffee-pouch`}>Coffee Pouch</Link>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h4 className='text-xl font-bold uppercase mb-5'>Userfull Links</h4>
+                    <h4 className='text-xl font-bold uppercase mb-5'>Userful Links</h4>
                     <ul>
                         <li className='mb-2 text-gray-500'>
                             <Link href={WEBSITE_HOME}>Home</Link>
@@ -98,8 +95,8 @@ const Footer = () => {
                     <h4 className='text-xl font-bold uppercase mb-5'>Contact Us </h4>
                     <ul>
                         <li className='mb-2 text-gray-500 flex gap-2'>
-                            <IoLocationOutline size={20} />
-                            <span className='text-sm'>E-store market Lucknow, India 256320</span>
+                            <IoLocationOutline size={50} />
+                            <span className='text-sm'>BitterSweetScent Hub, Vile Parle East, Mumbai, 400057, Maharashtra, India.</span>
                         </li>
                         <li className='mb-2 text-gray-500 flex gap-2'>
                             <MdOutlinePhone size={20} />
@@ -107,7 +104,7 @@ const Footer = () => {
                         </li>
                         <li className='mb-2 text-gray-500 flex gap-2'>
                             <MdOutlineMail size={20} />
-                            <Link href="mailto:support@estore.com" className='hover:text-primary text-sm'>support@estore.com</Link>
+                            <Link href="mailto:support@estore.com" className='hover:text-primary text-sm'>support@bittersweetscent.com</Link>
                         </li>
 
                     </ul>
@@ -115,21 +112,21 @@ const Footer = () => {
 
                     <div className='flex gap-5 mt-5'>
 
-                        <Link href="">
+                        {/* <Link href="">
                             <AiOutlineYoutube className='text-primary' size={25} />
-                        </Link>
+                        </Link> */}
                         <Link href="">
                             <FaInstagram className='text-primary' size={25} />
                         </Link>
                         <Link href="">
                             <FaWhatsapp className='text-primary' size={25} />
                         </Link>
-                        <Link href="">
+                        {/* <Link href="">
                             <TiSocialFacebookCircular className='text-primary' size={25} />
                         </Link>
                         <Link href="">
                             <FiTwitter className='text-primary' size={25} />
-                        </Link>
+                        </Link> */}
 
                     </div>
 
@@ -139,7 +136,7 @@ const Footer = () => {
 
 
             <div className='py-5 bg-gray-100' >
-                <p className='text-center'>© 2024 Estore. All Rights Reserved.</p>
+                <p className='text-center'>© 2025 BitterSweetScent. All Rights Reserved.</p>
             </div>
 
         </footer>

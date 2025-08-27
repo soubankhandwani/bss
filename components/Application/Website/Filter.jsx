@@ -19,11 +19,11 @@ const Filter = () => {
 
     const [priceFilter, setPriceFilter] = useState({ minPrice: 0, maxPrice: 3000 })
     const [selectedCategory, setSelectedCategory] = useState([])
-    const [selectedColor, setSelectedColor] = useState([])
+    const [selectedBrand, setSelectedBrand] = useState([])
     const [selectedSize, setSelectedSize] = useState([])
 
     const { data: categoryData } = useFetch('/api/category/get-category')
-    const { data: colorData } = useFetch('/api/product-variant/colors')
+    const { data: brandData } = useFetch('/api/product-variant/brands')
     const { data: sizeData } = useFetch('/api/product-variant/sizes')
 
     const urlSearchParams = new URLSearchParams(searchParams.toString())
@@ -32,7 +32,7 @@ const Filter = () => {
     useEffect(() => {
         searchParams.get('category') ? setSelectedCategory(searchParams.get('category').split(',')) : setSelectedCategory([])
 
-        searchParams.get('color') ? setSelectedColor(searchParams.get('color').split(',')) : setSelectedColor([])
+        searchParams.get('brand') ? setSelectedBrand(searchParams.get('brand').split(',')) : setSelectedBrand([])
 
         searchParams.get('size') ? setSelectedSize(searchParams.get('size').split(',')) : setSelectedSize([])
 
@@ -62,17 +62,17 @@ const Filter = () => {
 
     }
 
-    const handleColorFilter = (color) => {
-        let newSelectedColor = [...selectedColor]
-        if (newSelectedColor.includes(color)) {
-            newSelectedColor = newSelectedColor.filter(cat => cat !== color)
+    const handleBrandFilter = (brand) => {
+        let newSelectedBrand = [...selectedBrand]
+        if (newSelectedBrand.includes(brand)) {
+            newSelectedBrand = newSelectedBrand.filter(cat => cat !== brand)
         } else {
-            newSelectedColor.push(color)
+            newSelectedBrand.push(brand)
         }
 
-        setSelectedColor(newSelectedColor)
+        setSelectedBrand(newSelectedBrand)
 
-        newSelectedColor.length > 0 ? urlSearchParams.set('color', newSelectedColor.join(',')) : urlSearchParams.delete('color')
+        newSelectedBrand.length > 0 ? urlSearchParams.set('brand', newSelectedBrand.join(',')) : urlSearchParams.delete('brand')
 
         router.push(`${WEBSITE_SHOP}?${urlSearchParams}`)
 
@@ -132,18 +132,18 @@ const Filter = () => {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="2">
-                    <AccordionTrigger className="uppercase font-semibold hover:no-underline">Color</AccordionTrigger>
+                    <AccordionTrigger className="uppercase font-semibold hover:no-underline">Brand</AccordionTrigger>
                     <AccordionContent>
                         <div className='max-h-48 overflow-auto'>
                             <ul>
-                                {colorData && colorData.success && colorData.data.map((color) => (
-                                    <li key={color} className='mb-3'>
+                                {brandData && brandData.success && brandData.data.map((brand) => (
+                                    <li key={brand} className='mb-3'>
                                         <label className="flex items-center space-x-3 cursor-pointer">
                                             <Checkbox
-                                                onCheckedChange={() => handleColorFilter(color)}
-                                                checked={selectedColor.includes(color)}
+                                                onCheckedChange={() => handleBrandFilter(brand)}
+                                                checked={selectedBrand.includes(brand)}
                                             />
-                                            <span>{color}</span>
+                                            <span>{brand}</span>
                                         </label>
                                     </li>
                                 ))}
@@ -152,7 +152,7 @@ const Filter = () => {
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="3">
-                    <AccordionTrigger className="uppercase font-semibold hover:no-underline">Size</AccordionTrigger>
+                    <AccordionTrigger className="uppercase font-semibold hover:no-underline">Intensity</AccordionTrigger>
                     <AccordionContent>
                         <div className='max-h-48 overflow-auto'>
                             <ul>

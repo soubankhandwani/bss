@@ -17,7 +17,7 @@ export async function POST(request) {
         const schema = zSchema.pick({
             product: true,
             sku: true,
-            color: true,
+            brand: true,
             size: true,
             mrp: true,
             sellingPrice: true,
@@ -35,7 +35,7 @@ export async function POST(request) {
 
         const newProductVariant = new ProductVariantModel({
             product: variantData.product,
-            color: variantData.color,
+            brand: variantData.brand,
             size: variantData.size,
             sku: variantData.sku,
             mrp: variantData.mrp,

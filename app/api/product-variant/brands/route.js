@@ -8,13 +8,13 @@ export async function GET() {
 
         await connectDB()
 
-        const getColor = await ProductVariantModel.distinct('color')
+        const getBrand = await ProductVariantModel.distinct('brand')
 
-        if (!getColor) {
-            return response(false, 404, 'Color not found.')
+        if (!getBrand) {
+            return response(false, 404, 'Brand not found.')
         }
 
-        return response(true, 200, 'Color found.', getColor)
+        return response(true, 200, 'Brand found.', getBrand)
 
     } catch (error) {
         return catchError(error)

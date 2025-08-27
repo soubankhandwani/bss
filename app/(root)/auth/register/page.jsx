@@ -1,7 +1,7 @@
 'use client'
 import { Card, CardContent } from '@/components/ui/card'
 import React, { useState } from 'react'
-import Logo from '@/public/assets/images/logo-black.png'
+import Logo from '@/public/assets/images/bss-logo.jpg'
 import Image from 'next/image'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { zSchema } from '@/lib/zodSchema'
@@ -84,7 +84,7 @@ const RegisterPage = () => {
                                         <FormItem>
                                             <FormLabel>Full Name</FormLabel>
                                             <FormControl>
-                                                <Input type="text" placeholder="Developer goswami" {...field} />
+                                                <Input type="text" placeholder="BitterSweetScent" {...field} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
