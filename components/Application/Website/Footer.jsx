@@ -76,10 +76,10 @@ const Footer = () => {
                             <Link href={WEBSITE_REGISTER}>Register</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={WEBSITE_LOGIN}>Login</Link>
+                            <Link href="/shipping-and-delivery">Shipping & Delivery</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
-                            <Link href={USER_DASHBOARD}>My Account</Link>
+                            <Link href="/cancellation-and-refunds">Cancellation & Refund</Link>
                         </li>
                         <li className='mb-2 text-gray-500'>
                             <Link href="/privacy-policy">Privacy Policy</Link>
@@ -104,7 +104,7 @@ const Footer = () => {
                         </li>
                         <li className='mb-2 text-gray-500 flex gap-2'>
                             <MdOutlineMail size={20} />
-                            <Link href="mailto:support@estore.com" className='hover:text-primary text-sm'>support@bittersweetscent.com</Link>
+                            <Link href="mailto:support@bittersweetscent.com" className='hover:text-primary text-sm'>support@bittersweetscent.com</Link>
                         </li>
 
                     </ul>

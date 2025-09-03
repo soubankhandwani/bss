@@ -14,43 +14,40 @@ const PrivacyPolicy = () => {
             <WebsiteBreadcrumb props={breadcrumb} />
             <div className='lg:px-40 px-5 py-20'>
                 <h1 className='text-xl font-semibold mb-3'>Privacy Policy</h1>
-                <p>
-                    At E-store, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
-                </p>
-
+                
+                <h2 className='font-semibold mt-5'>1. Privacy Commitment</h2>
                 <p className='mt-3'>
-                    This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or make a purchase.
+                    BittersweetScent treats all customer data with utmost care and does not sell or rent any personal information to external organizations.
                 </p>
 
-                <p className='mt-5'>Information We Collect:</p>
+                <h2 className='font-semibold mt-5'>2. Information We Collect</h2>
                 <ul className='list-disc ps-10 mt-3'>
-                    <li><b>Personal Information:</b> Such as your name, email address, phone number, and shipping/billing addresses, provided during account registration or checkout.</li>
-                    <li><b>Payment Details:</b> Collected securely through encrypted payment gateways.</li>
-                    <li><b>Usage Data:</b> Including your browser type, IP address, pages visited, and time spent on the site to help us improve user experience.</li>
+                    <li><b>Personal details:</b> Name, billing and shipping addresses, email, phone number.</li>
+                    <li><b>Transaction details:</b> Order history and related information.</li>
+                    <li><b>Technical data:</b> Your device's IP address, operating system, browser type, and aggregated browsing behavior—statistics only, not tied to any individual.</li>
                 </ul>
 
-                <p className='mt-5'>How We Use Your Information:</p>
+                <h2 className='font-semibold mt-5'>3. Use of Collected Information</h2>
+                <p className='mt-3'>BittersweetScent uses your data for:</p>
                 <ul className='list-disc ps-10 mt-3'>
-                    <li>To process your orders and provide customer support.</li>
-                    <li>To personalize your shopping experience and improve our services.</li>
-                    <li>To send order updates, promotional offers, and newsletters (you may opt out at any time).</li>
-                    <li>To ensure our website is secure and functioning properly.</li>
+                    <li>Processing and shipping orders, billing, and handling transactions.</li>
+                    <li>Keeping you informed about product updates.</li>
                 </ul>
 
-                <p className='mt-5'>
-                    We do not sell, rent, or share your personal information with third parties, except when necessary to fulfill your order or comply with legal obligations.
+                <h2 className='font-semibold mt-5'>4. Sharing of Information</h2>
+                <p className='mt-3'>Your information may be shared in the following cases:</p>
+                <ul className='list-disc ps-10 mt-3'>
+                    <li>As required by law or to protect the company's rights or property.</li>
+                    <li>To complete a transaction at your request (e.g., sharing with delivery or payment processors).</li>
+                    <li>With service providers involved in fulfilling your order.</li>
+                </ul>
+                <p className='mt-3'>
+                    Additionally, if BittersweetScent cannot respect a request to restrict data usage, they reserve the right to delete customer information.
                 </p>
 
+                <h2 className='font-semibold mt-5'>5. Privacy Policy Updates</h2>
                 <p className='mt-3'>
-                    By using our website, you consent to the practices outlined in this Privacy Policy. We may update this policy from time to time, and any changes will be reflected on this page.
-                </p>
-
-                <p className='mt-3'>
-                    If you have any questions or concerns regarding our Privacy Policy, please contact our support team.
-                </p>
-
-                <p className='mt-3'>
-                    Thank you for trusting E-store. Your privacy is important to us.
+                    The policy is subject to change without prior notice. Users are encouraged to revisit the page periodically for updates.
                 </p>
             </div>
         </div>
