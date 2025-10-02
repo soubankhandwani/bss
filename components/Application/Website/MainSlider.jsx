@@ -4,10 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import slider1 from '@/public/assets/images/slider-1.png'
-import slider2 from '@/public/assets/images/slider-2.png'
-import slider3 from '@/public/assets/images/slider-3.png'
-import slider4 from '@/public/assets/images/slider-4.png'
+import slider1 from '@/public/assets/images/slider-1.jpg'
+import slider2 from '@/public/assets/images/slider-2.jpg'
+import slider3 from '@/public/assets/images/slider-3.jpg'
+import slider4 from '@/public/assets/images/slider-4.jpg'
+import slider5 from '@/public/assets/images/slider-5.jpg'
+import slider6 from '@/public/assets/images/slider-6.jpg'
+import slider7 from '@/public/assets/images/slider-7.jpg'
+import slider8 from '@/public/assets/images/slider-8.jpg'
 import Image from 'next/image';
 import { LuChevronRight } from "react-icons/lu";
 import { LuChevronLeft } from "react-icons/lu";
@@ -65,6 +69,18 @@ const MainSlider = () => {
                 </div>
                 <div>
                     <Image src={slider4.src} width={slider4.width} height={slider4.height} alt='slider 4' />
+                </div>
+                <div>
+                    <Image src={slider5.src} width={slider5.width} height={slider5.height} alt='slider 5' />
+                </div>
+                <div>
+                    <Image src={slider6.src} width={slider6.width} height={slider6.height} alt='slider 6' />
+                </div>
+                <div>
+                    <Image src={slider7.src} width={slider7.width} height={slider7.height} alt='slider 7' />
+                </div>
+                <div>
+                    <Image src={slider8.src} width={slider8.width} height={slider8.height} alt='slider 8' />
                 </div>
             </Slider>
         </div>
