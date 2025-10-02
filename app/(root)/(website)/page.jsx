@@ -22,7 +22,7 @@ const Home = () => {
             <section className='lg:px-32 px-4 sm:pt-20 pt-5 pb-10'>
                 <div className='grid grid-cols-2 sm:gap-10 gap-2'>
 
-                    <div className='border rounded-lg overflow-hidden'>
+                    {/* <div className='border rounded-lg overflow-hidden'>
                         <Link href="" >
                             <Image
                                 src={banner1.src}
@@ -43,14 +43,14 @@ const Home = () => {
                                 className='transition-all hover:scale-110'
                             />
                         </Link>
-                    </div>
+                    </div> */}
 
                 </div>
             </section>
 
             <FeaturedProduct />
 
-            <section className='sm:pt-20 pt-5 pb-10'>
+            {/* <section className='sm:pt-20 pt-5 pb-10'>
                 <Image
                     src={advertisingBanner.src}
                     height={advertisingBanner.height}
@@ -58,7 +58,7 @@ const Home = () => {
                     alt='Advertisement'
 
                 />
-            </section>
+            </section> */}
 
             <Testimonial />
 
