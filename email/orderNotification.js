@@ -210,7 +210,7 @@ export const orderNotification = (data) => {
 																style="width:100%;padding-right:0px;padding-left:0px;">
 																<div align="center" class="alignment">
 																	<div style="max-width: 248px;"><img alt="Logo"
-																			height="auto" src="https://res.cloudinary.com/dg7efdu9o/image/upload/v1747200653/logo-black_luvjrd.webp"
+																			height="auto" src="https://www.bittersweetscent.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbss-logo.3d1e0262.jpg&w=828&q=75"
 																			style="display: block; height: auto; border: 0; width: 100%;"
 																			title="Logo" width="248" /></div>
 																</div>
@@ -522,23 +522,7 @@ export const orderNotification = (data) => {
 																		width="108px">
 																		<tr>
 																			<td style="padding:0 0 0 4px;"><a
-																					href="https://www.facebook.com/"
-																					target="_blank"><img alt="facebook"
-																						height="auto"
-																						src="https://res.cloudinary.com/dg7efdu9o/image/upload/v1747200654/facebook2x_cph6xp.webp"
-																						style="display: block; height: auto; border: 0;"
-																						title="facebook"
-																						width="32" /></a></td>
-																			<td style="padding:0 0 0 4px;"><a
-																					href="https://www.twitter.com/"
-																					target="_blank"><img alt="twitter"
-																						height="auto"
-																						src="https://res.cloudinary.com/dg7efdu9o/image/upload/v1747200654/twitter2x_ztsdk9.webp"
-																						style="display: block; height: auto; border: 0;"
-																						title="twitter"
-																						width="32" /></a></td>
-																			<td style="padding:0 0 0 4px;"><a
-																					href="https://www.instagram.com/"
+																					href="https://www.instagram.com/bitter_sweetscent/"
 																					target="_blank"><img alt="instagram"
 																						height="auto"
 																						src="https://res.cloudinary.com/dg7efdu9o/image/upload/v1747200655/instagram2x_fbwltb.webp"
@@ -608,7 +592,7 @@ export const orderNotification = (data) => {
 																	style="color:#ffffff;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:18px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:left;mso-line-height-alt:22px;">
 																	<p style="margin: 0;"><strong>Have a
 																			question?</strong> We love curiosity. <a
-																			href="contact-us.com" rel="noopener"
+																			href="www.bittersweetscent.com" rel="noopener"
 																			style="text-decoration: underline; color: #ffffff;"
 																			target="_blank">contact us</a></p>
 																</div>
@@ -667,81 +651,6 @@ export const orderNotification = (data) => {
 						<tbody>
 							<tr>
 								<td>
-									<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content"
-										role="presentation"
-										style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #000000; border-radius: 0; color: #000000; width: 680px; margin: 0 auto;"
-										width="680">
-										<tbody>
-											<tr>
-												<td class="column column-1"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 20px; padding-top: 5px; vertical-align: top;"
-													width="33.333333333333336%">
-													<table border="0" cellpadding="0" cellspacing="0"
-														class="paragraph_block block-1" role="presentation"
-														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
-														width="100%">
-														<tr>
-															<td class="pad"
-																style="padding-bottom:20px;padding-top:15px;">
-																<div
-																	style="color:#f7f1ed;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:13px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:16px;">
-																	<p style="margin: 0;"><a
-																			href="https://www.example.com"
-																			rel="noopener"
-																			style="text-decoration: underline; color: #f7f1ed;"
-																			target="_blank">Give me everything!</a></p>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class="column column-2"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; vertical-align: top;"
-													width="33.333333333333336%">
-													<table border="0" cellpadding="0" cellspacing="0"
-														class="paragraph_block block-1" role="presentation"
-														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
-														width="100%">
-														<tr>
-															<td class="pad"
-																style="padding-bottom:20px;padding-top:15px;">
-																<div
-																	style="color:#f7f1ed;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:13px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:16px;">
-																	<p style="margin: 0;"><a
-																			href="https://www.example.com"
-																			rel="noopener"
-																			style="text-decoration: underline; color: #f7f1ed;"
-																			target="_blank">Just the essentials.</a></p>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class="column column-3"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 20px; padding-right: 20px; padding-top: 5px; vertical-align: top;"
-													width="33.333333333333336%">
-													<table border="0" cellpadding="0" cellspacing="0"
-														class="paragraph_block block-1" role="presentation"
-														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
-														width="100%">
-														<tr>
-															<td class="pad"
-																style="padding-bottom:20px;padding-top:15px;">
-																<div
-																	style="color:#f7f1ed;direction:ltr;font-family:TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;font-size:13px;font-weight:400;letter-spacing:0px;line-height:1.2;text-align:center;mso-line-height-alt:16px;">
-																	<p style="margin: 0;"><a
-																			href="https://www.example.com"
-																			rel="noopener"
-																			style="text-decoration: underline; color: #f7f1ed;"
-																			target="_blank">Unsubscribe</a></p>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
 								</td>
 							</tr>
 						</tbody>
