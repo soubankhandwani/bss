@@ -192,9 +192,9 @@ const Checkout = () => {
                 "key": process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
                 "amount": totalAmount * 100,
                 "currency": "INR",
-                "name": "E-store",
+                "name": "BitterSweetScent",
                 "description": "Payment for order",
-                "image": "https://res.cloudinary.com/dg7efdu9o/image/upload/v1750052410/logo-black_mb1rve.webp",
+                "image": "https://www.bittersweetscent.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbss-logo.3d1e0262.jpg&w=828&q=75",
                 "order_id": order_id,
                 "handler": async function (response) {
                     setSavingOrder(true)
