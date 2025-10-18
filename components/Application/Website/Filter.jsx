@@ -156,7 +156,11 @@ const Filter = () => {
                     <AccordionContent>
                         <div className='max-h-48 overflow-auto'>
                             <ul>
-                                {sizeData && sizeData.success && sizeData.data.map((size) => (
+                                {sizeData && sizeData.success && sizeData.data.sort((a, b) => {
+                                                                                    const aStart = parseInt(a.split('-')[0])
+                                                                                    const bStart = parseInt(b.split('-')[0])
+                                                                                    return aStart - bStart
+                                                                                }).map((size) => (
                                     <li key={size} className='mb-3'>
                                         <label className="flex items-center space-x-3 cursor-pointer">
                                             <Checkbox

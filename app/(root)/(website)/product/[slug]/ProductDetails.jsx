@@ -178,7 +178,7 @@ const ProductDetails = ({ product, variant, brands, sizes, reviewCount }) => {
                     </div>
                     <div className="mt-5">
                         <p className="mb-2">
-                            <span className="font-semibold">Size: </span> {variant?.size}
+                            <span className="font-semibold">Intensity: </span> {variant?.size}
                         </p>
                         <div className="flex gap-5">
                             {sizes.map(size => (

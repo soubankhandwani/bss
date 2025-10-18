@@ -100,11 +100,11 @@ const Footer = () => {
                         </li>
                         <li className='mb-2 text-gray-500 flex gap-2'>
                             <MdOutlinePhone size={20} />
-                            <Link href="tel:+91-8569874589" className='hover:text-primary text-sm'>+91-8569874589</Link>
+                            <Link href="tel:+91-7977771949" className='hover:text-primary text-sm'>+91-79777 71949</Link>
                         </li>
                         <li className='mb-2 text-gray-500 flex gap-2'>
                             <MdOutlineMail size={20} />
-                            <Link href="mailto:support@bittersweetscent.com" className='hover:text-primary text-sm'>support@bittersweetscent.com</Link>
+                            <Link href="mailto:bittersweetscent1@gmail.com" className='hover:text-primary text-sm'>bittersweetscent1@gmail.com</Link>
                         </li>
 
                     </ul>
@@ -115,10 +115,10 @@ const Footer = () => {
                         {/* <Link href="">
                             <AiOutlineYoutube className='text-primary' size={25} />
                         </Link> */}
-                        <Link href="">
+                        <Link href="https://www.instagram.com/bitter_sweetscent/">
                             <FaInstagram className='text-primary' size={25} />
                         </Link>
-                        <Link href="">
+                        <Link href="https://api.whatsapp.com/send/?phone=917977771949&text&type=phone_number&app_absent=0">
                             <FaWhatsapp className='text-primary' size={25} />
                         </Link>
                         {/* <Link href="">

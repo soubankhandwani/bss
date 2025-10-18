@@ -55,72 +55,72 @@ export async function GET(request) {
 
         // aggregation pipeline  
         const products = await ProductModel.aggregate([
-            { $match: matchStage },
-            { $sort: sortquery },
-            { $skip: skip },
-            { $limit: limit + 1 },
-            {
-                $lookup: {
-                    from: 'productvariants',
-                    localField: '_id',
-                    foreignField: 'product',
-                    as: 'variants'
+        { $match: matchStage },
+        { $sort: sortquery },
+
+        // Lookup variants early
+        {
+            $lookup: {
+            from: 'productvariants',
+            localField: '_id',
+            foreignField: 'product',
+            as: 'variants'
+            }
+        },
+        {
+            $addFields: {
+            variants: {
+                $filter: {
+                input: "$variants",
+                as: 'variant',
+                cond: {
+                    $and: [
+                    size ? { $in: ["$$variant.size", size.split(',')] } : { $literal: true },
+                    brand ? { $in: ["$$variant.brand", brand.split(',')] } : { $literal: true },
+                    { $gte: ["$$variant.sellingPrice", minPrice] },
+                    { $lte: ["$$variant.sellingPrice", maxPrice] },
+                    ]
                 }
-            },
-            {
-                $addFields: {
-                    variants: {
-                        $filter: {
-                            input: "$variants",
-                            as: 'variant',
-                            cond: {
-                                $and: [
-                                    size ? { $in: ["$$variant.size", size.split(',')] } : { $literal: true },
-                                    brand ? { $in: ["$$variant.brand", brand.split(',')] } : { $literal: true },
-                                    { $gte: ["$$variant.sellingPrice", minPrice] },
-                                    { $lte: ["$$variant.sellingPrice", maxPrice] },
-                                ]
-                            }
-                        }
-                    }
-                }
-            },
-            {
-                $match: {
-                    variants: { $ne: [] }
-                }
-            },
-            {
-                $lookup: {
-                    from: 'medias',
-                    localField: 'media',
-                    foreignField: '_id',
-                    as: 'media'
-                }
-            },
-            {
-                $project: {
-                    _id: 1,
-                    name: 1,
-                    slug: 1,
-                    mrp: 1,
-                    sellingPrice: 1,
-                    discountPercentage: 1,
-                    media: {
-                        _id: 1,
-                        secure_url: 1,
-                        alt: 1
-                    },
-                    variants: {
-                        brand: 1,
-                        size: 1,
-                        mrp: 1,
-                        sellingPrice: 1,
-                        discountPercentage: 1,
-                    }
                 }
             }
-        ])
+            }
+        },
+        // Filter only products that still have variants left
+        { $match: { variants: { $ne: [] } } },
+
+        // Lookup media after filtering
+        {
+            $lookup: {
+            from: 'medias',
+            localField: 'media',
+            foreignField: '_id',
+            as: 'media'
+            }
+        },
+
+        // Pagination should happen LAST
+        { $skip: skip },
+        { $limit: limit + 1 },
+
+        {
+            $project: {
+            _id: 1,
+            name: 1,
+            slug: 1,
+            mrp: 1,
+            sellingPrice: 1,
+            discountPercentage: 1,
+            media: { _id: 1, secure_url: 1, alt: 1 },
+            variants: {
+                brand: 1,
+                size: 1,
+                mrp: 1,
+                sellingPrice: 1,
+                discountPercentage: 1,
+            }
+            }
+        }
+        ]);
 
 
 
